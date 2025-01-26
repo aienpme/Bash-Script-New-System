@@ -17,8 +17,20 @@ if [[ "$response" == "y" || "$response" == "Y" ]]; then
 	
 	sudo apt update && sudo apt upgrade -y
 	
-	echo "Installing flatpak..."
+	#If flatpak is not installed, install it 
+	
+	if ! command -v flatpak &>/dev/null; then
+	echo "Flatpak is not your system, installing now..."
 	sudo apt install flatpak -y
+	else 
+	echo
+	echo
+	echo "Hey there, flatpak is already installed!"
+	echo "This script will now stop. Goodbye!"
+	
+	fi
+	
+	echo "Setup complete! Enjoy your new system!"
 
 else 
 	echo "Goodbye!"
