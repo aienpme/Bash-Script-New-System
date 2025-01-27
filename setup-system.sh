@@ -109,8 +109,16 @@ if [[ "$response" == "y" || "$response" == "Y" ]]; then
     			echo "No problem! Enjoy your new system"
 		fi
 	else
-
-	echo "Thanks for using the script!!"
+	
+	
+	echo
+	echo
+	echo "Will be installing Gnome Tweak Tool to help you with customising your system and change themes easily!"
+	echo
+	echo
+	sudo apt install gnome-tweaks
+	
+	echo "No problem! Thanks for using the script!"
 
 	fi
 	
